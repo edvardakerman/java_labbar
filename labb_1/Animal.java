@@ -1,9 +1,7 @@
 class Animal {
-  String type;
   String name;
 
-  Animal(String type, String name) {
-    this.type = type;
+  Animal(String name) {
     this.name = name;
   }
 

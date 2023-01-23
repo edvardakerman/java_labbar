@@ -13,7 +13,7 @@ class personnummer {
 
     }
 
-    // Metod för att hämta data från consolen, (personnummer) test
+    // Metod för att hämta data från consolen, (personnummer)
     public static String getString() {
 
 		Scanner input = new Scanner(System.in);
