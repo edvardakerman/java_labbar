@@ -37,13 +37,17 @@ class personnummer {
             // om i är jämnt
             if (i % 2 == 0) {
                 
+                // kollar om (personnummer av I * 2) är större än 9
                 if (Character.getNumericValue(strPnr.charAt(i)) * 2 >= 10){
+                    // multplicerar personnummer av I med 2 och sprara i string s
                     String s = Integer.toString(Character.getNumericValue(strPnr.charAt(i)) * 2);
+                    // adderar index 0 med index 1 av string s och += med produkt
                     produkt += Character.getNumericValue(s.charAt(0)) + Character.getNumericValue(s.charAt(1));
                 } else {
+                    // multplicerar personnummer av I med 2 och += med produkt
                    produkt += Character.getNumericValue(strPnr.charAt(i)) * 2;
                 }
-                
+
             // om i är udda
             } else {
                 produkt += Character.getNumericValue(strPnr.charAt(i)) * 1;
