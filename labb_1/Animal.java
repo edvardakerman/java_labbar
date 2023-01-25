@@ -2,8 +2,8 @@ class Animal {
   private String name;
   private int birthyear;
   private static int currentYear = 2023;
-  private String friend;
-  private String toy;
+  private Animal friend;
+  private Toy toy;
 
   Animal(String name, int birthyear) {
     this.name = name;
@@ -14,11 +14,11 @@ class Animal {
     Animal.currentYear = newYear;
   }
   public void setFriend(Animal ani){
-    this.friend = ani.getName();
+    this.friend = ani;
   }
 
   public void addToy(Toy toy){
-    this.toy = toy.getName();
+    this.toy = toy;
   }
 
   public int getAge(){
@@ -39,12 +39,12 @@ class Animal {
       System.out.println(this.name + " finns i huset");      
     }
     else if (this.friend == null){
-      System.out.println(this.name + " finns i huset med leksaken " + this.toy);      
+      System.out.println(this.name + " finns i huset med leksaken " + this.toy.getName());      
     }
     else if (this.toy == null){
-      System.out.println(this.name + " finns i huset med kompisen " + this.friend);     
+      System.out.println(this.name + " finns i huset med kompisen " + this.friend.getName());     
     } else {
-      System.out.println(this.name + " finns i huset med kompisen " + this.friend + " och leksaken " + this.toy);
+      System.out.println(this.name + " finns i huset med kompisen " + this.friend.getName() + " och leksaken " + this.toy.getName());
     }
 
   }
@@ -56,7 +56,7 @@ class Animal {
   }
 
   String makeSound() {
-    return ""; // ???
+    return "";
   }
   
   void fly() {
