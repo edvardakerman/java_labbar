@@ -1,11 +1,12 @@
 class Bird extends Animal {
-    Bird(String name) {
-      super(name);   // Animals konstruktor anropas
+    Bird(String name, int birthyear) {
+      super(name, birthyear);   // Animals konstruktor anropas
     }
   
     void introduceYourself()
     {
-      System.out.println("Pip Pip! Jag är en fågel vid namn " + name + ".");
+      System.out.println("Pip Pip! Jag är en fågel vid namn " + getName() + ".");
+      System.out.println("Jag är " + getAge() + " år gammal.");
     }
   
     String makeSound() {

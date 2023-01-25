@@ -1,11 +1,12 @@
 class Cat extends Animal {
-    Cat(String name) {
-      super(name);   // Animals konstruktor anropas
+    Cat(String name, int birthyear) {
+      super(name, birthyear);   // Animals konstruktor anropas
     }
   
     void introduceYourself()
     {
-      System.out.println("Mjau. Jag är en katt som heter " + name + ".");
+      System.out.println("Mjau. Jag är en katt som heter " + getName() + ".");
+      System.out.println("Jag är " + getAge() + " år gammal.");
     }
   
     String makeSound() {

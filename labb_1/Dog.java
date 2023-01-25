@@ -1,11 +1,12 @@
 class Dog extends Animal {
-    Dog(String name) {
-      super(name);   // Animals konstruktor anropas
+    Dog(String name, int birthyear) {
+      super(name, birthyear);   // Animals konstruktor anropas
     }
   
     void introduceYourself()
     {
-      System.out.println("Vovv!!! Jag är en hund som kallas " + name + ".");
+      System.out.println("Vovv!!! Jag är en hund som kallas " + getName() + ".");
+      System.out.println("Jag är " + getAge() + " år gammal.");
     }
   
     String makeSound() {
